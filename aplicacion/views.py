@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
 # Create your views here.
 def index(request):
@@ -11,5 +12,6 @@ def repartidores(request):
 def restaurantes(request):
     return render(request, "aplicacion/restaurantes.html")
 
-def proveedores(request):
-    return render(request, "aplicacion/proveedores.html")
+def clientes(request):
+    ctx={"clientes": Cliente.objects.all()}
+    return render(request, "aplicacion/clientes.html", ctx)

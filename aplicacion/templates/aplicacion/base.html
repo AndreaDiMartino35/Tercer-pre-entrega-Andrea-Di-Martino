@@ -23,7 +23,7 @@
                 <a class="navbar-brand" href="#!">Página principal</a>
                 <a class="navbar-brand" href="{% url 'restaurantes' %}">Restaurantes</a>
                 <a class="navbar-brand" href="{% url 'repartidores' %}">Repartidores</a>
-                <a class="navbar-brand" href="{% url 'proveedores' %}">Proveedores</a>
+                <a class="navbar-brand" href="{% url 'clientes' %}">Clientes</a>
                 <a class="btn btn-primary" href="{% url 'admin:index' %}">Administración</a>
             </div>
         </nav>
@@ -48,6 +48,11 @@
                 </div>
             </div>
         </header>
+
+        {% block contenido %}
+        En esta sección se define el contenido para cada página
+        {% endblock contenido %}
+
         <!-- Image Showcases-->
         <section class="showcase">
             <div class="container-fluid p-0">

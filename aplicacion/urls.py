@@ -5,5 +5,5 @@ urlpatterns = [
     path('', index, name="inicio"),
     path('repartidores', repartidores, name="repartidores"),
     path('restaurantes', restaurantes, name="restaurantes"),
-    path('proveedores', proveedores, name="proveedores"),
+    path('clientes', clientes, name="clientes"),
 ]
