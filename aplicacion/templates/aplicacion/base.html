@@ -6,7 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Landing Page - Start Bootstrap Theme</title>
+        <title>
+            {% block titulo %}
+            Inicio
+            {% endblock titulo %}
+        </title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -50,7 +54,7 @@
         </header>
 
         {% block contenido %}
-        En esta sección se define el contenido para cada página
+        
         {% endblock contenido %}
 
         <!-- Image Showcases-->

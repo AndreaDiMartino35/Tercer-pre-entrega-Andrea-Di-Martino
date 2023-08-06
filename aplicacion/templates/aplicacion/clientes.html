@@ -1,8 +1,14 @@
 {% extends 'aplicacion/base.html' %}
 {% load static %}
 
+{% block titulo %}
+    Clientes
+{% endblock titulo %}
+
 {% block contenido %}
+
     <h1>Clientes</h1> 
+
     {% for cliente in clientes %}
     <ul>
         <li>
