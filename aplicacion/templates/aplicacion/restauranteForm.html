@@ -1,0 +1,20 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Nuevo Restaurante
+{% endblock titulo %}
+
+{% block cabecera %}
+    Nuevo Restaurante
+{% endblock cabecera %}
+
+{% block contenido %}
+    <h2>Crear nuevo Restaurante</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Nombre: <input type="text" name="nombre" id="nombre"></p>
+        <p>Numero de pedido: <input type="number" name="numero_de_pedido" id="numero_de_pedido"></p>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock contenido %}

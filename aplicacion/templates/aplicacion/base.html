@@ -8,7 +8,7 @@
         <meta name="author" content="" />
         <title>
             {% block titulo %}
-            Inicio
+                Inicio
             {% endblock titulo %}
         </title>
         <!-- Favicon-->
@@ -38,7 +38,11 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Bienvenidos a Rappi! <br> Los mejores restaurantes en tu casa</h1>
+                            <h1 class="mb-5">
+                                {% block cabecera %}
+                                Bienvenidos a Rappi! <br> Los mejores restaurantes en tu casa
+                                {% endblock cabecera %}
+                            </h1>
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->

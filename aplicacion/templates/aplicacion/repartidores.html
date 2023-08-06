@@ -1,11 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repartidores</title>
-</head>
-<body>
- <h1>Repartidores</h1> 
-</body>
-</html>
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Repartidores
+{% endblock titulo %}
+
+{% block cabecera %}
+Listado de Repartidores
+{% endblock cabecera %}
+
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for repartidor in repartidores %}
+    <tr>
+        <td>{{ repartidor.id }}</td>
+        <td>{{ repartidor.nombre}}</td>
+        <td>{{ repartidor.apellido}}</td>
+        <td>{{ repartidor.email}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}

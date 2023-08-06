@@ -1,11 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurantes</title>
-</head>
-<body>
- <h1>Restaurantes</h1>   
-</body>
-</html>
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Restaurantes
+{% endblock titulo %}
+
+{% block cabecera %}
+Listado de Restaurantes
+{% endblock cabecera %}
+
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Numero_de_pedido</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for restaurante in restaurantes %}
+    <tr>
+        <td>{{ restaurante.id }}</td>
+        <td>{{ restaurante.nombre}}</td>
+        <td>{{ restaurante.numero_de_pedido}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
